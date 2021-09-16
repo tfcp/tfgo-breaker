@@ -1,10 +1,10 @@
 # tfgo-breaker
 
-## Intro
+## 1. Intro
 This is a easy breaker by golang code. U can use it in your project quickly.
 Support function break, timeout, auto dry-run.
 
-## Demo
+## 2. Demo
 
 ```
     func main() {
@@ -36,5 +36,5 @@ Support function break, timeout, auto dry-run.
     }
 ```
 
-## Notice
+## 3. Notice
 Our breaker should block a process or a function
