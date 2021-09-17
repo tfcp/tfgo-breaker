@@ -38,3 +38,13 @@ Support function break, timeout, auto dry-run.
 
 ## 3. Notice
 Our breaker should block a process or a function
+
+## 4. breaker conf
+|  title   | describe  |default|
+|  ----  | ----  |----|
+|  Name | breaker name. one business process or function have one breaker.    |  |
+|  Threshold | breaker reached value. key include (jsonRpcUrl+jsonRpc)  | 500 |
+|  Expire  | breakerKey expired time. |5 min|
+|  DryRunPercent  | when breaker is opened, there is ?% requests can pass breaker, if one of those success, breaker will closed. (example: 10: 1/10  5: 1/5 2: 1/2) |10%|
+|  CallBackFunc  | normal business logic. when breaker is closed, will run it | |
+|  BreakerFunc   | breaker business logic. when breaker is opened, will run it| |
