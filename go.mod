@@ -1,4 +1,4 @@
-module github.com/tfgo-breaker
+module github.com/tfcp/tfgo-breaker
 
 go 1.14
 
