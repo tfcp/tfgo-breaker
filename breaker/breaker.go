@@ -1,7 +1,6 @@
 package breaker
 
 import (
-	"fmt"
 	errs "github.com/pkg/errors"
 	"time"
 )
@@ -43,7 +42,6 @@ func (this *Breaker) Run(request interface{}) (interface{}, error) {
 		// dry run (default 1% request)
 		res, err, breakerRes := this.conf.CallBackFunc(request)
 		if true == breakerRes {
-			fmt.Println("breaker is close")
 			// dry run success we can close breaker
 			cache.Set(breakerKey, 0, this.conf.Expire)
 		}
